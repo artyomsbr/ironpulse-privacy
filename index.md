@@ -1,9 +1,9 @@
-# Privacy Policy — Iron Pulse
+# Privacy Policy — Strenos
 
 **Effective date:** May 6, 2026
 **Last updated:** May 6, 2026
 
-This Privacy Policy describes how Iron Pulse ("we", "our", "the App") handles personal information. Iron Pulse is an iOS fitness application designed to help users plan, log, and analyze their workouts. **The App does not collect, transmit, sell, or share personal data with anyone.** All information you create stays on your device and (optionally, with your consent) in your private iCloud account.
+This Privacy Policy describes how Iron Pulse ("we", "our", "the App") handles personal information. Strenos is an iOS fitness application designed to help users plan, log, and analyze their workouts. **The App does not collect, transmit, sell, or share personal data with anyone.** All information you create stays on your device and (optionally, with your consent) in your private iCloud account.
 
 ---
 
@@ -21,7 +21,7 @@ If a section below contradicts this summary, the section governs.
 
 ## 2. Who we are
 
-Iron Pulse is published by:
+Strenos is published by:
 
 **Iron Pulse**
 Independent developer — Latvian citizen (EU), currently residing in Georgia
@@ -35,7 +35,7 @@ For privacy questions, write to **as28873728@gmail.com**. We respond to verified
 
 ### 3.1 Data you create inside the App (stored on-device)
 
-When you use Iron Pulse you generate workout records. Examples:
+When you use Strenos you generate workout records. Examples:
 
 - **Profile**: display name, age, gender, height, weight, body fat percentage, body measurements
 - **Workouts**: exercises performed, sets, reps, weight, rest time, RPE (rate of perceived exertion), workout duration, notes
@@ -49,7 +49,7 @@ This data is stored locally in Apple's SwiftData (a local SQLite-backed database
 
 ### 3.2 Data Apple processes on our behalf
 
-Three Apple-provided systems hold or relay your data. Apple, not Iron Pulse, is the processor:
+Three Apple-provided systems hold or relay your data. Apple, not Strenos, is the processor:
 
 | System | What it stores | Where |
 |---|---|---|
@@ -86,20 +86,20 @@ If you choose to sign in with Apple ("Apple Sign-In"), the App receives a stable
 
 We do not transmit this identifier to any server we control. If you provide an email at sign-in, Apple may forward a private-relay email to us; we do not currently use it.
 
-To revoke: Settings → Apple ID → Password & Security → Sign in with Apple → Iron Pulse → Stop Using.
+To revoke: Settings → Apple ID → Password & Security → Sign in with Apple → Strenos → Stop Using.
 
 ---
 
 ## 5. HealthKit
 
-Iron Pulse integrates with Apple HealthKit when you grant permission. We use HealthKit for:
+Strenos integrates with Apple HealthKit when you grant permission. We use HealthKit for:
 
 - **Reading**: heart rate and active calories during a workout you started in the App, so we can show real-time stats
 - **Writing**: workout records (start/end, calories, heart rate samples) so they appear in Apple Health and contribute to your Activity rings
 
 HealthKit data **never** leaves your device through Iron Pulse. We do not back up, transmit, sell, or share HealthKit information. Apple's HealthKit framework is end-to-end encrypted and inaccessible to us outside of an active in-app workout session.
 
-You can revoke HealthKit access any time: Settings → Privacy & Security → Health → Iron Pulse.
+You can revoke HealthKit access any time: Settings → Privacy & Security → Health → Strenos.
 
 ---
 
@@ -117,7 +117,7 @@ We do not run any custom backend; the only "server" is Apple's CloudKit. If you 
 
 ## 7. In-App Purchases
 
-Iron Pulse offers an optional subscription, **Iron Pulse Plus**, plus a one-time Lifetime purchase. All payments are handled exclusively by Apple via StoreKit 2. We **never** see:
+Strenos offers an optional subscription, **Strenos Plus**, plus a one-time Lifetime purchase. All payments are handled exclusively by Apple via StoreKit 2. We **never** see:
 
 - Your card number
 - Your billing address
@@ -133,7 +133,7 @@ Refunds, cancellations, and family-sharing are managed entirely through your App
 
 ## 8. Optional widgets and extensions
 
-Iron Pulse includes a Home Screen widget bundle, an Apple Watch app, and a Lock Screen Live Activity. These extensions:
+Strenos includes a Home Screen widget bundle, an Apple Watch app, and a Lock Screen Live Activity. These extensions:
 
 - Read **only** the data already stored in your local SwiftData store and a private App Group container
 - Do **not** transmit anything outside your device
@@ -143,7 +143,7 @@ Iron Pulse includes a Home Screen widget bundle, an Apple Watch app, and a Lock 
 
 ## 9. Children
 
-Iron Pulse is not directed at users under 13. We do not knowingly process data from anyone under 13. If you believe a minor has used the App, contact as28873728@gmail.com and we will help you erase any local data on the affected device.
+Strenos is not directed at users under 13. We do not knowingly process data from anyone under 13. If you believe a minor has used the App, contact as28873728@gmail.com and we will help you erase any local data on the affected device.
 
 ---
 
@@ -158,7 +158,7 @@ Because we store no personal data on our servers, the right to access, rectify, 
 | **Erasure ("right to be forgotten")** | Settings → Удалить все данные ("Delete all data"). Permanently removes every workout, record, profile, and media file from this device, and from your iCloud private database when re-synced |
 | **Portability** | Settings → Backup → Export. Produces a JSON file with all your data |
 | **Restriction / Objection** | Disable HealthKit, iCloud, and Bluetooth in Settings → Privacy at any time |
-| **Withdraw consent** | Apple Sign-In: revoke via iOS Settings → Apple ID → Iron Pulse → Stop Using |
+| **Withdraw consent** | Apple Sign-In: revoke via iOS Settings → Apple ID → Strenos → Stop Using |
 
 **EU / UK users (GDPR)**: legal basis for processing on-device data is your consent (Art. 6(1)(a)) and legitimate interest in delivering the requested fitness service (Art. 6(1)(f)). No data is transferred outside your device by us.
 
@@ -180,7 +180,7 @@ We have **no separate retention timer** because we do not hold the data.
 
 ## 12. Security
 
-Iron Pulse uses Apple's standard on-device encryption:
+Strenos uses Apple's standard on-device encryption:
 
 - SwiftData store is encrypted at rest when the device passcode is set
 - HealthKit data is encrypted by Apple
@@ -194,7 +194,7 @@ If you discover a vulnerability, please email **as28873728@gmail.com**. We follo
 
 ## 13. Third-party services we **do not** use
 
-To be explicit — Iron Pulse contains no integrations with:
+To be explicit — Strenos contains no integrations with:
 
 - Google Analytics, Firebase, Crashlytics, Sentry, Bugsnag, AppCenter
 - Facebook SDK, Meta Pixel, AppsFlyer, Adjust, Branch
@@ -238,4 +238,4 @@ We aim to respond within **30 days**.
 
 ---
 
-*Iron Pulse — built by athletes, for athletes. We respect the same privacy on your data that we want for ours.*
+*Strenos — built by athletes, for athletes. We respect the same privacy on your data that we want for ours.*

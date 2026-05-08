@@ -1,241 +1,156 @@
-# Privacy Policy — Strenos
+# Privacy Policy
 
-**Effective date:** May 6, 2026
-**Last updated:** May 6, 2026
+**Strenos** · Last updated: May 8, 2026
 
-This Privacy Policy describes how Iron Pulse ("we", "our", "the App") handles personal information. Strenos is an iOS fitness application designed to help users plan, log, and analyze their workouts. **The App does not collect, transmit, sell, or share personal data with anyone.** All information you create stays on your device and (optionally, with your consent) in your private iCloud account.
+This Privacy Policy explains how Strenos ("the app", "we", "us") handles information you provide while using the Strenos iOS application. Strenos is a workout tracker for strength training, conditioning, and recovery analytics.
 
----
-
-## 1. Summary (TL;DR)
-
-- **No analytics, no advertising, no tracking.** We do not run third-party SDKs.
-- **No account on our servers.** We don't have servers; we don't have your data.
-- **Your fitness data lives on your iPhone** and, if you enable iCloud, in your private iCloud database that only you can access.
-- **HealthKit data** stays on your device. We never read or write Health data outside the workout session you started in the App.
-- **In-App Purchases** are handled by Apple. We never see your payment details.
-
-If a section below contradicts this summary, the section governs.
+> **Summary in plain English.** Strenos runs no servers. Your workout data, photos, videos, and personal records are stored privately in *your own iCloud account* (Apple's CloudKit private database) and on your device. We do not collect, sell, or share your data with anyone. There are no advertising SDKs, no analytics SDKs, and no third-party tracking.
 
 ---
 
-## 2. Who we are
+## 1. Who is responsible for your data
 
-Strenos is published by:
+The app developer is the data controller. For privacy questions, account deletion requests, or to exercise your rights under GDPR, CCPA, or other applicable law, contact:
 
-**Iron Pulse**
-Independent developer — Latvian citizen (EU), currently residing in Georgia
-Contact: as28873728@gmail.com
+- Email: [strenos.support@gmail.com](mailto:strenos.support@gmail.com)
 
-For privacy questions, write to **as28873728@gmail.com**. We respond to verified requests within 30 days (or shorter where required by law).
+## 2. Information we collect
 
----
+The categories below correspond 1:1 to our App Store privacy labels. All data stays in your iCloud and on your device unless explicitly noted.
 
-## 3. Data we process
+### 2.1 Health & Fitness data
 
-### 3.1 Data you create inside the App (stored on-device)
+If you grant permission, Strenos reads from and writes to Apple Health (HealthKit):
 
-When you use Strenos you generate workout records. Examples:
+- **Heart rate** — read during and after workouts to display real-time and average HR.
+- **Active energy (calories)** — read to display calories burned per workout.
+- **Workouts** — written when you complete a session, so the workout appears in Apple Health and contributes to your Activity rings.
 
-- **Profile**: display name, age, gender, height, weight, body fat percentage, body measurements
-- **Workouts**: exercises performed, sets, reps, weight, rest time, RPE (rate of perceived exertion), workout duration, notes
-- **Programs and timers**: training programs you build (Standard, Tabata, EMOM, AMRAP, Interval, Circuit, Yoga); timer presets
-- **Personal records (PRs)**: max weight, max reps, time records, custom records
-- **Wellness logs**: hydration glass count, sleep bedtime/wake time, body weight history, body measurements
-- **Calendar**: scheduled workouts, week templates, mesocycle plans
-- **Optional media**: photos / videos you attach to personal records (Plus subscription only)
+You control HealthKit access at any time in *iOS Settings → Privacy & Security → Health → Strenos*. Health data never leaves Apple Health and your iCloud. Apple does not share your HealthKit data with us as a developer.
 
-This data is stored locally in Apple's SwiftData (a local SQLite-backed database) and is **never sent to Iron Pulse**.
+### 2.2 User-generated content
 
-### 3.2 Data Apple processes on our behalf
+Information you create inside the app:
 
-Three Apple-provided systems hold or relay your data. Apple, not Strenos, is the processor:
+- Workout logs (exercises, sets, reps, weights, RPE, notes)
+- Custom training programs
+- Personal records (PRs) and record types
+- Calendar entries and week templates
+- Body weight, sleep, hydration logs
+- Photos and videos you attach to personal records
 
-| System | What it stores | Where |
-|---|---|---|
-| **iCloud (CloudKit)** — optional, only with Apple Sign-In | Encrypted copy of your workouts, programs, profile, records, media | Your private iCloud account, end-to-end encrypted; only you can read it |
-| **HealthKit** — optional, only after permission | Heart rate, active calories, workout summaries you choose to write back | Apple Health database on your device, encrypted |
-| **App Store / StoreKit 2** | Subscription receipts, purchase history | Apple's billing system; we receive an anonymous "subscribed / not subscribed" signal |
+This content is stored in **your private CloudKit database**, accessible only to you with your Apple ID. We have no ability to access it.
 
-We have **no direct access** to your iCloud, HealthKit, or App Store records. Apple's privacy policy (https://www.apple.com/legal/privacy/) governs that data.
+### 2.3 Account identifier (Sign in with Apple)
 
-### 3.3 Data we do NOT collect
+If you choose to sign in, Apple provides a stable per-app identifier so the app can keep your data linked to *your* profile across devices. We never receive your real name, email, or phone number unless you explicitly share them with Apple.
 
-We **do not** process any of the following:
+Sign in with Apple is optional. Strenos works fully offline on a single device without an account.
 
-- Email addresses, phone numbers, or postal addresses
-- IP addresses or device fingerprints
-- Crash reports identifying you (Apple's optional analytics may include them; see below)
-- Advertising identifiers (IDFA / IDFV)
-- Browsing behavior, app usage timestamps, session length, screens viewed
-- Microphone, camera, contacts, calendar events, photos (we only request video write access for record clips, never read)
-- Location data
-- Any information derived from third-party SDKs — **we don't use any**
+### 2.4 External heart-rate sensors (Bluetooth)
 
-The App's `PrivacyInfo.xcprivacy` Privacy Manifest declares the same — we declare zero `NSPrivacyCollectedDataTypes` to Apple.
+If you pair a Bluetooth heart-rate monitor (e.g., Polar, Wahoo), readings flow directly from the sensor to your device through Apple's CoreBluetooth framework. Strenos displays the live values during your workout. We do not store or transmit raw sensor data outside of your device and iCloud.
 
----
+### 2.5 Subscription and purchase information
 
-## 4. Apple Sign-In
+All purchases (Strenos Plus subscriptions and the Lifetime option) are processed by Apple via StoreKit 2. We never see your payment method, card number, or Apple ID balance. Apple sends us only an anonymous transaction signature that proves the purchase is valid; this signature is verified cryptographically (JWS) and never stored on a remote server.
 
-If you choose to sign in with Apple ("Apple Sign-In"), the App receives a stable opaque identifier from Apple. This identifier:
+## 3. Information we do NOT collect
 
-- Is unique per app + Apple ID, but is **not** an email or name
-- Is stored locally on your device
-- Is used **only** to associate your local data with your iCloud database so the same data appears on your other devices
+- No real name, email, or phone number (unless you email us directly)
+- No location, GPS, or geolocation data
+- No browsing history, search history, or cookies
+- No contacts, calendar (system), or photo library content beyond items you explicitly attach to a record
+- No advertising identifiers (IDFA), no third-party analytics
+- No biometric data outside HealthKit
+- No usage tracking that leaves the device
 
-We do not transmit this identifier to any server we control. If you provide an email at sign-in, Apple may forward a private-relay email to us; we do not currently use it.
+## 4. How we use your data
 
-To revoke: Settings → Apple ID → Password & Security → Sign in with Apple → Strenos → Stop Using.
+The sole purpose of every category we collect is **App Functionality**:
 
----
-
-## 5. HealthKit
-
-Strenos integrates with Apple HealthKit when you grant permission. We use HealthKit for:
-
-- **Reading**: heart rate and active calories during a workout you started in the App, so we can show real-time stats
-- **Writing**: workout records (start/end, calories, heart rate samples) so they appear in Apple Health and contribute to your Activity rings
-
-HealthKit data **never** leaves your device through Iron Pulse. We do not back up, transmit, sell, or share HealthKit information. Apple's HealthKit framework is end-to-end encrypted and inaccessible to us outside of an active in-app workout session.
-
-You can revoke HealthKit access any time: Settings → Privacy & Security → Health → Strenos.
-
----
-
-## 6. iCloud sync (CloudKit)
-
-When you sign in with Apple, Iron Pulse uses **CloudKit** to mirror your data across your own Apple devices. Specifically:
-
-- Container: `iCloud.com.ironpulse.IronPulse.data`
-- Database type: **Private** (only you can read/write — we cannot)
-- Encryption: end-to-end encrypted by Apple
-
-We do not run any custom backend; the only "server" is Apple's CloudKit. If you sign out of iCloud, the data remains in your iCloud account and on the local device until you delete it.
-
----
-
-## 7. In-App Purchases
-
-Strenos offers an optional subscription, **Strenos Plus**, plus a one-time Lifetime purchase. All payments are handled exclusively by Apple via StoreKit 2. We **never** see:
-
-- Your card number
-- Your billing address
-- Your Apple ID password or any credential
-
-We receive only:
-- An anonymous boolean from Apple indicating whether you currently have an active subscription / lifetime entitlement
-- Apple's standard product identifiers (e.g. `com.ironpulse.IronPulse.plus.monthly`)
-
-Refunds, cancellations, and family-sharing are managed entirely through your Apple ID. See https://support.apple.com/HT202039.
-
----
-
-## 8. Optional widgets and extensions
-
-Strenos includes a Home Screen widget bundle, an Apple Watch app, and a Lock Screen Live Activity. These extensions:
-
-- Read **only** the data already stored in your local SwiftData store and a private App Group container
-- Do **not** transmit anything outside your device
-- Are governed by the same data-handling rules as the main App
-
----
-
-## 9. Children
-
-Strenos is not directed at users under 13. We do not knowingly process data from anyone under 13. If you believe a minor has used the App, contact as28873728@gmail.com and we will help you erase any local data on the affected device.
-
----
-
-## 10. Your rights
-
-Because we store no personal data on our servers, the right to access, rectify, delete, port, or restrict processing is exercised on your device:
-
-| Right | How to exercise |
+| Data | Purpose |
 |---|---|
-| **Access** | Open the App; all your data is visible in Settings → Profile, Progress, Calendar, etc. |
-| **Rectification** | Edit any record directly in the App |
-| **Erasure ("right to be forgotten")** | Settings → Удалить все данные ("Delete all data"). Permanently removes every workout, record, profile, and media file from this device, and from your iCloud private database when re-synced |
-| **Portability** | Settings → Backup → Export. Produces a JSON file with all your data |
-| **Restriction / Objection** | Disable HealthKit, iCloud, and Bluetooth in Settings → Privacy at any time |
-| **Withdraw consent** | Apple Sign-In: revoke via iOS Settings → Apple ID → Strenos → Stop Using |
+| Health (HR, calories) | Show metrics during/after workouts; compute readiness score and recovery insights locally |
+| Fitness (workouts) | Sync sessions to Apple Health; build progress charts |
+| User content (logs, programs, PRs) | Power the workout tracker, programs, calendar, and analytics |
+| Photos/videos | Allow you to attach visual proof to personal records |
+| Apple Sign In ID | Identify your private CloudKit data across your devices |
 
-**EU / UK users (GDPR)**: legal basis for processing on-device data is your consent (Art. 6(1)(a)) and legitimate interest in delivering the requested fitness service (Art. 6(1)(f)). No data is transferred outside your device by us.
+We do **not** use your data for: advertising, marketing, analytics, profiling, personalization across users, training third-party AI models, or any commercial purpose beyond running the app on your devices.
 
-**California residents (CCPA / CPRA)**: we do not sell or share personal information for cross-context behavioral advertising. Submit verified requests to as28873728@gmail.com. We will respond within 45 days.
+## 5. Where your data lives
 
-**Brazil (LGPD), Quebec (Law 25), other regional laws**: equivalent rights apply; same contact email.
+- **On your device**: workouts and programs are stored locally using Apple's SwiftData framework.
+- **In your iCloud**: the same data is mirrored to your Apple-managed private CloudKit database, encrypted by Apple in transit and at rest. Only you can access it.
+- **In Apple Health**: workouts and metrics live in HealthKit, controlled entirely by you via iOS Settings.
 
----
+Strenos has no backend servers, no databases under our control, and no remote logging service.
 
-## 11. Data retention
+## 6. Data sharing
 
-- **On-device**: until you delete the App, delete the data through Settings, or factory-reset the device.
-- **iCloud**: until you sign out and delete the iCloud container, or use Apple's "Manage Storage" to remove Iron Pulse data.
-- **App Store receipts**: governed by Apple's retention policy.
+We do not sell or share your data with third parties. The only entity that processes your data on our behalf is **Apple Inc.**, in the role of an infrastructure provider:
 
-We have **no separate retention timer** because we do not hold the data.
+- **Apple iCloud / CloudKit** — storage of your private data, in your account.
+- **Apple HealthKit** — system framework for reading/writing health data on your device.
+- **Apple StoreKit** — processing of in-app purchases and subscriptions.
+- **Apple Sign In** — optional authentication.
+- **Apple Push Notification service (APNs)** — delivery of local workout reminders if you enable them.
 
----
+Apple's use of this data is governed by Apple's own privacy policy: [apple.com/legal/privacy](https://www.apple.com/legal/privacy/).
 
-## 12. Security
+## 7. International data transfers
 
-Strenos uses Apple's standard on-device encryption:
+Your data is stored in the iCloud region Apple assigns to your Apple ID. Apple maintains data centers across the EU, US, and other jurisdictions. We do not transfer your data ourselves; all transfers are governed by Apple's standard contractual mechanisms.
 
-- SwiftData store is encrypted at rest when the device passcode is set
-- HealthKit data is encrypted by Apple
-- iCloud private database uses end-to-end encryption
-- StoreKit 2 transactions are signed and verified
-- No HTTP traffic is initiated by the App; the only network calls Apple may make on our behalf are App Store metadata, CloudKit sync, and Apple's analytics (if you opted in)
+## 8. Data retention
 
-If you discover a vulnerability, please email **as28873728@gmail.com**. We follow coordinated disclosure.
+Your data persists as long as you keep the app installed and your iCloud account active. You can delete all of it at any time:
 
----
+1. Inside the app: **Settings → Delete Account**. This wipes your local profile and removes your data from your private CloudKit database.
+2. To remove HealthKit data written by Strenos: *Apple Health app → Sources → Strenos → Delete All Data*.
 
-## 13. Third-party services we **do not** use
+Once deleted, the action is permanent. We retain no copies because we hold no copies to begin with.
 
-To be explicit — Strenos contains no integrations with:
+## 9. Your rights (GDPR, CCPA, and similar)
 
-- Google Analytics, Firebase, Crashlytics, Sentry, Bugsnag, AppCenter
-- Facebook SDK, Meta Pixel, AppsFlyer, Adjust, Branch
-- Mixpanel, Amplitude, Heap, Segment
-- AdMob, Unity Ads, ironSource, AppLovin
-- OneSignal, Pushwoosh, or any third-party push provider
-- TikTok, Twitter, or social-media SDKs
+Because all your personal data lives under your control in iCloud and HealthKit, the following rights are exercised directly through Apple's system tools:
 
-The App's binary contains no third-party SDKs at all. The only "external" frameworks are Apple's first-party APIs (HealthKit, CloudKit, StoreKit, WidgetKit, ActivityKit, Bluetooth, etc.).
+- **Right to access** — export workout data via Strenos's built-in JSON backup (Settings → Backup), or use Apple's standard data-export tools at [privacy.apple.com](https://privacy.apple.com).
+- **Right to erasure** — Settings → Delete Account inside the app.
+- **Right to restrict processing** — revoke HealthKit permission, sign out of Apple Sign In, or uninstall the app.
+- **Right to portability** — Strenos's JSON backup contains your full dataset.
+- **Right to object** — not applicable; we do not process your data for marketing, profiling, or analytics.
 
----
+For any privacy-related request that cannot be handled through the app or iOS, email [strenos.support@gmail.com](mailto:strenos.support@gmail.com). We respond within 30 days.
 
-## 14. Changes to this policy
+## 10. Children's privacy
 
-If we change how we handle your data, we will:
+Strenos is rated 4+ on the App Store but is designed for adult athletes. We do not knowingly collect personal information from children under 13 (or under 16 in the EU). If you believe a minor has used Strenos, contact us and we will assist with deletion.
 
-1. Update the "Last updated" date at the top
-2. Display a notice inside the App on next launch
-3. For material changes (new data type, new third-party recipient), require your renewed consent before the change takes effect
+## 11. Security
 
-Older versions of this policy are available on request.
+Because all your data is stored in your iCloud and on your device, security is anchored to Apple's infrastructure: end-to-end encryption for HealthKit, encryption at rest and in transit for CloudKit private databases, and Secure Enclave protection for purchase signatures (StoreKit 2 JWS). The app does not handle or transmit unencrypted data over the network.
 
----
+## 12. Subscriptions and the free trial
 
-## 15. Apple's privacy policy
+Strenos offers an optional **10-day free trial of Plus features** on first launch. The trial is implemented locally in the app (no card required, no automatic charge afterward) and ends silently when the period expires.
 
-Because Apple processes your iCloud, HealthKit, and App Store interactions, their privacy policy also applies:
-**https://www.apple.com/legal/privacy/**
+If you choose to subscribe to **Strenos Plus** or buy **Plus Lifetime**, the transaction is processed by Apple StoreKit. Auto-renewable subscriptions renew automatically until you cancel them through Apple's subscription management UI (Settings → Manage Subscription inside the app, or *iOS Settings → [Apple ID] → Subscriptions*). Apple's standard [EULA](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) applies to all purchases.
 
----
+## 13. Changes to this policy
 
-## 16. Contact
+If this policy changes materially, we will update the "Last updated" date at the top and, where required, notify you within the app. Continued use of Strenos after a change means you accept the revised terms.
 
-| Topic | Address |
-|---|---|
-| Privacy questions, GDPR / CCPA requests | as28873728@gmail.com |
-| Security disclosure | as28873728@gmail.com |
-| Support | as28873728@gmail.com |
+## 14. Contact
 
-We aim to respond within **30 days**.
+For privacy questions, account-deletion requests, or to exercise any of your rights:
+
+- Email: [strenos.support@gmail.com](mailto:strenos.support@gmail.com)
+- Support page: [artyomsbr.github.io/strenos-privacy/support/](https://artyomsbr.github.io/strenos-privacy/support/)
+
+We typically respond within 24–48 hours.
 
 ---
 
-*Strenos — built by athletes, for athletes. We respect the same privacy on your data that we want for ours.*
+[Support](https://artyomsbr.github.io/strenos-privacy/support/) · Strenos © 2026

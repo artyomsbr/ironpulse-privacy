@@ -47,11 +47,7 @@ If you choose to sign in, Apple provides a stable per-app identifier so the app 
 
 Sign in with Apple is optional. Strenos works fully offline on a single device without an account.
 
-### 2.4 External heart-rate sensors (Bluetooth)
-
-If you pair a Bluetooth heart-rate monitor (e.g., Polar, Wahoo), readings flow directly from the sensor to your device through Apple's CoreBluetooth framework. Strenos displays the live values during your workout. We do not store or transmit raw sensor data outside of your device and iCloud.
-
-### 2.5 Subscription and purchase information
+### 2.4 Subscription and purchase information
 
 All purchases (Strenos Plus subscriptions and the Lifetime option) are processed by Apple via StoreKit 2. We never see your payment method, card number, or Apple ID balance. Apple sends us only an anonymous transaction signature that proves the purchase is valid; this signature is verified cryptographically (JWS) and never stored on a remote server.
 
